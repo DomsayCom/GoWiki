@@ -1,0 +1,16 @@
+{{ template "header" . }}
+
+<h1>Editing {{.Title}}</h1>
+
+<form action="/save/{{.Title}}" method="POST">
+
+<div class="input-field col s12">
+  <textarea id="body" class="materialize-textarea" name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea>
+  <label for="body">Body</label>
+</div>
+
+<div><input class="waves-effect waves-light btn" type="submit" value="Save"></div>
+
+</form>
+
+{{ template "footer" . }}
